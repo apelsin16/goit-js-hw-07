@@ -20,15 +20,20 @@ function destroyBoxes() {
 function createBoxes(amount) {
   if(amount > 100 || amount < 1) return;
   destroyBoxes();
+
+  const fragment = document.createDocumentFragment();
+  
   for(let i = 0; i < amount; i++) {
       const box = document.createElement('div');
       box.style.width = 30 + 10 * i + 'px';
       box.style.height = 30 + 10 * i + 'px';
       box.style.backgroundColor = getRandomHexColor();
       
-      boxes.append(box);
+      fragment.append(box);
   }
+
+  boxes.append(fragment);
 }
 
 destroyButton.addEventListener('click', destroyBoxes);
-createButton.addEventListener('click', () => createBoxes(input.value));
+createButton.addEventListener('click', () => createBoxes(Number(input.value)));

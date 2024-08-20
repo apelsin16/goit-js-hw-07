@@ -31,6 +31,9 @@ const gallery = document.querySelector('.gallery');
     gallery.style.flexWrap = 'wrap';
     gallery.style.gap = '24px'
     gallery.style.rowGap = '48px'
+    
+    const fragment = document.createDocumentFragment();
+   
 
     images.map(image => {
       const itemElement = document.createElement('li');
@@ -46,5 +49,7 @@ const gallery = document.querySelector('.gallery');
       imageElement.style.objectFit = 'cover';
 
       itemElement.append(imageElement);
-      gallery.append(itemElement);
-    });    
+      fragment.append(itemElement);
+    });  
+    
+    gallery.append(fragment);
