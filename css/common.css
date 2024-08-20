@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
@@ -12,3 +14,135 @@ body {
   color: #212121;
   line-height: 1.5;
 }
+
+ul {
+  list-style: none;
+}
+
+.item {
+  background-color: #F6F6FE;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.item:last-of-type {
+  margin-bottom: 0;
+}
+
+.item h2,
+h1 {
+  font-size: 24px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: #2E2F42;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.item li,
+input {
+  padding: 8px 16px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  width: 360px;
+}
+
+input:hover {
+  border-radius: #000000;
+}
+
+.item li:last-of-type {
+  margin-bottom: 0;
+}
+
+input#name-input {
+  width: 360px;
+}
+
+.login-form, .login-form label {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form label {
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+
+.login-form label input {
+  margin-top: 8px;
+}
+
+.login-form label:last-of-type input {
+  margin-bottom: 0;
+}
+
+button {
+  background-color: #4E75FF;
+  border: none;
+  padding: 8px 16px;
+  color: #FFFFFF;
+  border-radius: 8px;
+  align-self: flex-start;
+  margin-top: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  transition: background-color 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+button:hover {
+  background-color: #6C8CFF;
+}
+
+.widget {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.widget button {
+  align-self: center;
+}
+
+#controls {
+  display: flex;
+  gap: 16px;
+  background-color: #F6F6FE;
+  padding: 32px;
+  border-radius: 8px;
+  width: 486px;
+}
+
+#controls input {
+  width: 150px;
+  text-align: center;
+}
+
+#controls input,
+#controls button {
+  margin: 0;
+}
+
+button[data-destroy] {
+  background-color: #FF4E4E;
+}
+
+button[data-destroy]:hover {
+  background-color: #FF7070;
+}
+
+#boxes {
+  display: inline-flex;
+  background-color: #F6F6FE;
+  border-radius: 8px;
+  gap: 44px;
+  padding: 32px 28px;
+  margin-top: 16px;
+}
+
+

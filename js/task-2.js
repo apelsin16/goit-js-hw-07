@@ -28,18 +28,22 @@ const images = [
 const gallery = document.querySelector('.gallery');
 
     gallery.style.display = 'flex';
-    gallery.style.listStyle = 'none'
-    gallery.style.gap = '10px'
+    gallery.style.flexWrap = 'wrap';
+    gallery.style.gap = '24px'
+    gallery.style.rowGap = '48px'
 
     images.map(image => {
       const itemElement = document.createElement('li');
       const imageElement = document.createElement('img');
 
-      itemElement.style.width = '250px';
+      itemElement.style.width = '360px';
+      itemElement.style.height = '300px';
       
       imageElement.setAttribute('src', image.url);
       imageElement.setAttribute('alt', image.alt);
-      imageElement.style.width = '100%';
+      imageElement.style.width = '360px';
+      imageElement.style.height = '300px';
+      imageElement.style.objectFit = 'cover';
 
       itemElement.append(imageElement);
       gallery.append(itemElement);
