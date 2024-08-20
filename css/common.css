@@ -121,6 +121,7 @@ button:hover {
 #controls input {
   width: 150px;
   text-align: center;
+  background-color: #F6F6FE;
 }
 
 #controls input,
